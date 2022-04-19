@@ -114,3 +114,38 @@ a. What output do you think the code will produce if aNumber is 3?
 b. Write a test program containing the previous code snippet; make aNumber 3. What is the output of the program? Is it what you predicted? Explain why the output is what it is; in other words, what is the control flow for the code snippet?
 c. Using only spaces and line breaks, reformat the code snippet to make the control flow easier to understand.
 d. Use braces, { and }, to further clarify the code.
+
+## More on Classes (1)
+https://docs.oracle.com/javase/tutorial/java/javaOO/QandE/creating-questions.html
+
+**Questions**
+1. Consider the following class:  
+
+        public class IdentifyMyParts {
+            public static int x = 7;
+            public int y = 3;
+        }
+   a. What are the class variables?
+   x
+   b. What are the instance variables?
+   y
+2. What is the output from the following code:  
+
+         IdentifyMyParts a = new IdentifyMyParts();
+         IdentifyMyParts b = new IdentifyMyParts();
+         a.y = 5;
+         b.y = 6;
+         a.x = 1;
+         b.x = 2;
+         System.out.println("a.y = " + a.y);
+         System.out.println("b.y = " + b.y);
+         System.out.println("a.x = " + a.x);
+         System.out.println("b.x = " + b.x);
+         System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);
+
+**Answer —** 
+a.y = 5
+b.y = 6
+a.x = 2
+b.x = 2
+IndentifyMyParts.x = 2
