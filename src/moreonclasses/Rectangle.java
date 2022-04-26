@@ -2,7 +2,11 @@ package moreonclasses;
 
 public class Rectangle {
     private int x, y;
-    private int width, height;
+    public int width, height;
+
+    public int area() {
+        return width * height;
+    }
 
     public Rectangle() {
         this(0, 0, 1, 1);

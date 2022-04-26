@@ -125,9 +125,9 @@ https://docs.oracle.com/javase/tutorial/java/javaOO/QandE/creating-questions.htm
             public static int x = 7;
             public int y = 3;
         }
-   a. What are the class variables?
-   x
-   b. What are the instance variables?
+   a. What are the class variables?  
+   x  
+   b. What are the instance variables?  
    y
 2. What is the output from the following code:  
 
@@ -144,8 +144,36 @@ https://docs.oracle.com/javase/tutorial/java/javaOO/QandE/creating-questions.htm
          System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);
 
 **Answer —** 
-a.y = 5
-b.y = 6
-a.x = 2
-b.x = 2
-IndentifyMyParts.x = 2
+a.y = 5  
+b.y = 6  
+a.x = 2  
+b.x = 2  
+IdentifyMyParts.x = 2  
+
+
+## More on Classes (2)
+https://docs.oracle.com/javase/tutorial/java/javaOO/QandE/objects-questions.html
+
+**Questions**
+1. What's wrong with the following program?
+
+       public class SomethingIsWrong {
+         public static void main(String[] args) {
+           Rectangle myRect;
+           myRect.width = 40;
+           myRect.height = 50;
+           System.out.println("myRect's area is " + myRect.area());
+         }
+       }
+**Answer**: myRect is never instantiated so the program does not compile
+
+2. **Question**: The following code creates one array and one string object. How many references to those objects exist after the code executes? Is either object eligible for garbage collection?  
+
+       String[] students = new String[10];
+       String studentName = "Peter Smith";
+       students[0] = studentName;
+       studentName = null;
+**There is one reference to the string object at students[0] and 1 reference to the array object at students, so neither will be garbage colected.**
+
+3. How does a program destroy an object it creates?
+In Java, the memory is deallocated by the garbage collector in the heap. This does not mean that the value is erased, but that it is eligible to be rewritten, and is effectively lost. The Java programmer does not need to worry about this but should understand how it works.
